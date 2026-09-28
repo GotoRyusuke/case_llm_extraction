@@ -47,12 +47,6 @@ minute, for under one US cent.
 >
 > Full field dictionaries and construction rules are in the project's
 > `data_description.md` §9–§10 (available on request).
->
-> **Collaboration is welcome** — on applying the data, on extending the
-> extraction to other disclosure fields, or on stress-testing the coding rules.
-> If you work on political connections of Chinese firms, corporate governance,
-> or LLM-based information extraction from Chinese text, please get in touch.
-<!-- TODO(author): add contact details (email / GitHub) here before sharing -->
 
 ---
 
