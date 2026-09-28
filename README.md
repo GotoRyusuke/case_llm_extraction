@@ -141,12 +141,6 @@ Two fields were dropped as noise: `stream: false` is already the default, and
 the request needs no `tools`, `stop` or penalty parameters. There is no
 `reasoning_content` to strip because thinking is off.
 
-The older artefacts under `output/stability/` record the model under the legacy
-name `deepseek-v4-flash`, because those runs predate the name change. Per the
-docs they resolve to the same backend, so the runs stay comparable — but this is
-exactly the kind of detail that undermines cross-month comparisons of LLM
-output, and §6 treats it that way.
-
 ---
 
 ## 4. The sample
@@ -306,11 +300,8 @@ The four raw draws and their usage records are kept in `output/stability/` so
 the comparison can be re-derived.
 
 **Caveat on comparing to the production run.** The full-corpus run over 285,511
-resumes was executed a month earlier with the same prompt and model name.
-Differences between it and this sample (e.g. it extracted a science-association
-delegate as `PARTY`, a false positive — see `review/audit.md` §P09) confound
-draw-to-draw variance with possible model drift. We cannot separate the two from
-the available evidence, so treat cross-month comparisons as indicative only.
+resumes was executed a month earlier with the same prompt and model name, with several rounds of post hoc refinement.
+Do run a couple of pilot tests before you exhaust your budget!
 
 ---
 
@@ -424,7 +415,7 @@ DEEPSEEK_BASE_URL=https://api.deepseek.com python code/extract_demo.py
 ## 9. Provenance and licence
 
 - **Source.** The resumes are public disclosure text from CSMAR's director and
-  officer database (董监高个人特征, table R80221) — the biography field as filed in
+  officer database (董监高个人特征) — the biography field as filed in
   Chinese listed companies' annual reports.
 - **Sample construction.** Person identifiers and stock codes are replaced with
   placeholders (`P01`…`P10`, `A01`…`A10`) and personal names are replaced with
@@ -432,8 +423,7 @@ DEEPSEEK_BASE_URL=https://api.deepseek.com python code/extract_demo.py
   fabricated name is attached to a real person's career. Organisation names
   inside the résumé text are kept as written, since the extractor needs them for
   context.
-- **Licence.** CSMAR data is redistributed under its own terms. Check your
-  institution's agreement before publishing derived text.
+- **Licence.** CSMAR data is redistributed under its own terms. You may get access to it via CU Lib.
 
 ---
 
@@ -482,11 +472,11 @@ Steps 4 and 5 are the two that a first implementation usually skips.
 
 > **A final note: What has already been built.**
 >
-> This folder is only the extraction *method*, demonstrated on 10 résumés. The
+> This folder is only the extraction *method*, demonstrated on 10 CVs. The
 > full dataset it belongs to is already complete, in two layers:
 >
-> - **Appointment-level events** — 285,511 résumés extracted into 71,943
->   political appointments, deduplicated across résumé versions down to
+> - **Appointment-level events** — 285,511 CVs extracted into 71,943
+>   political appointments, deduplicated and refined across CV versions down to
 >   **30,678** events, covering **20,381 executives at 4,249 listed firms**.
 > - **Political-connection panels** at three grains: firm-year-person
 >   (**1,363,767** rows), firm-year (**74,458**), and a firm-year panel anchored
@@ -497,5 +487,4 @@ Steps 4 and 5 are the two that a first implementation usually skips.
 >   politically connected director; under the firm-anchored definition, **42.3%
 >   of firm-years have an out-of-province connection**.
 >
-> Full field dictionaries and construction rules are in the project's
-> `data_description.md` §9–§10 (available on request).
+>   (available on request).
