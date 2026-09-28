@@ -1,0 +1,11 @@
+﻿case_id,slug,stock_code,resume_version,n_chars,shows
+P01,multi-type,A01,latest,588,Four institution types in one resume (GOV/PARTY/NPC/CPPCC).
+P02,full-trajectory,A02,longest,474,Long career from township to provincial level; stresses level inference.
+P03,npc-simple,A03,longest,891,One clean NPC membership; many association roles must be excluded.
+P04,cppcc-buried,A04,latest,806,Single CPPCC membership buried in a dense finance career.
+P05,exclusion-heavy,A05,latest,571,Dense union/federation/youth-league mentions; none should be extracted.
+P06,negative-control,A06,latest,320,No political appointment at all; correct output is an empty list.
+P07,boundary-judiciary,A07,latest,880,Temporary posting to a court: is the judiciary 'government'?
+P08,boundary-generic-cadre,A08,latest,1037,'干部' appears where a job title would be; not a leadership post.
+P09,boundary-group-org,A09,latest,1068,"Science-association delegate: a 群团组织, excluded by the spec."
+P10,boundary-soe-party,A10,longest,349,"SOE internal party committees: excluded by spec, tempting for the model."

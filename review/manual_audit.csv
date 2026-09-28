@@ -1,0 +1,12 @@
+case_id,slug,n_extracted,unambiguous_correct,defects,boundary_calls,false_negatives,verdict
+P01,multi-type,14,14,0,0,1,clean; one repeat 市委常委 merged into a single row (defensible)
+P02,full-trajectory,24,18,3,3,0,three defects: party organ typed GOV; 党委委员 should be 省委委员; one-body-two-names double count
+P03,npc-simple,1,1,0,0,0,clean
+P04,cppcc-buried,1,1,0,0,0,clean
+P05,exclusion-heavy,1,1,0,1,0,correct call on an ambiguous body (XPCC division discipline committee)
+P06,negative-control,0,0,0,0,0,correctly empty
+P07,boundary-judiciary,0,0,0,0,1,spec-correct but the spec is silent on the judiciary
+P08,boundary-generic-cadre,2,0,2,0,0,position_std "干部" is a descriptor not a post
+P09,boundary-group-org,0,0,0,0,0,correctly excluded (science association is a mass organisation)
+P10,boundary-soe-party,0,0,0,0,3,all central-bank 处长/副处长 posts missed
+TOTAL,,43,35,5,4,5,unambiguous precision 35/43 = 0.81 (single annotator; wide interval)

@@ -1,0 +1,15 @@
+{
+  "model": "deepseek-v4-flash",
+  "n_resumes": 10,
+  "n_failed": 0,
+  "n_appointments": 43,
+  "prompt_tokens": 19963,
+  "completion_tokens": 6577,
+  "elapsed_seconds": 32.6,
+  "seconds_per_resume": 3.26,
+  "estimated_cost_usd": 0.008352,
+  "price_per_mtok_usd": {
+    "input": 0.28,
+    "output": 0.42
+  }
+}

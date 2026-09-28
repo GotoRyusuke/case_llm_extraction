@@ -1,0 +1,13 @@
+# Never commit credentials.
+.env
+.env.*
+!.env.example
+
+# Local run artefacts that should not be versioned.
+output/run.log
+
+# Smoke-test output from a --limit run.
+output/*.limit*
+
+__pycache__/
+*.pyc
