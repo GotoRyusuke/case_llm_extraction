@@ -22,10 +22,11 @@ minute, for under one US cent.
 >    deliberately chosen to be appointment-rich, so the extrapolated total is a
 >    present-day upper bound, not a reconstruction of what was actually spent.
 > 2. **These figures are a proof of concept, not a production budget.** Ideally, after
->    the **Business School AI Hub** deploys some local models, we can implement this task
+>    the **Business School AI Hub** deploys local models, we can implement this method
 >    locally, where the marginal inference cost is negligible (electricity
->    bills will be covered by the university, hopefully.) Note, though, that the extraction
->    quality and the run-to-run variability reported in §5–§6
+>    bills will be covered by the university, hopefully.) You may refer to the [HPC service](https://scrp.econ.cuhk.edu.hk/guide/chat)
+>    provided by our colleagues in Econ department for a general picture of how a local model works.
+>    Note that the extraction quality and the run-to-run variability reported in §5–§6
 >    are properties of the DeepSeek model tested here; a different model (e.g.
 >     from Z.ai or Qwen) needs
 >    its own validation before those numbers can be assumed to carry over.
