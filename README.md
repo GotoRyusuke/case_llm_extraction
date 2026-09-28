@@ -21,11 +21,13 @@ minute, for under one US cent.
 >    per-token prices in §7 are the *current* ones, applied to a sample that was
 >    deliberately chosen to be appointment-rich, so the extrapolated total is a
 >    present-day upper bound, not a reconstruction of what was actually spent.
-> 2. **These figures are a proof of concept, not a production budget.** The
->    intended production path is a locally deployed model on the **Business
->    School AI Hub**, where marginal inference cost is negligible. Note, though,
->    that the extraction quality and the run-to-run variability reported in §5–§6
->    are properties of the DeepSeek model tested here; a different model needs
+> 2. **These figures are a proof of concept, not a production budget.** Ideally, after
+>    the **Business School AI Hub** deploys some local models, we can implement this task
+>    locally, where the marginal inference cost is negligible (electricity
+>    bills will be covered by the university, hopefully.) Note, though, that the extraction
+>    quality and the run-to-run variability reported in §5–§6
+>    are properties of the DeepSeek model tested here; a different model (e.g.
+>     from Z.ai or Qwen) needs
 >    its own validation before those numbers can be assumed to carry over.
 
 ---
