@@ -28,26 +28,6 @@ minute, for under one US cent.
 >    are properties of the DeepSeek model tested here; a different model needs
 >    its own validation before those numbers can be assumed to carry over.
 
-> **What has already been built, and an open invitation.**
->
-> This folder is only the extraction *method*, demonstrated on 10 résumés. The
-> full dataset it belongs to is already complete, in two layers:
->
-> - **Appointment-level events** — 285,511 résumés extracted into 71,943
->   political appointments, deduplicated across résumé versions down to
->   **30,678** events, covering **20,381 executives at 4,249 listed firms**.
-> - **Political-connection panels** at three grains: firm-year-person
->   (**1,363,767** rows), firm-year (**74,458**), and a firm-year panel anchored
->   to each firm's registered address (**58,263**). The anchored panel classifies
->   every appointment as local / same-province-other-city / cross-province /
->   central, and separates directors from executives. 12.5% of person-years
->   carry a political appointment and 78.2% of firm-years have at least one
->   politically connected director; under the firm-anchored definition, **42.3%
->   of firm-years have an out-of-province connection**.
->
-> Full field dictionaries and construction rules are in the project's
-> `data_description.md` §9–§10 (available on request).
-
 ---
 
 ## 1. Why this is not a regex problem
@@ -497,3 +477,23 @@ text where a written specification can stand in for an annotation guide:
    level, not the string level.**
 
 Steps 4 and 5 are the two that a first implementation usually skips.
+
+> **A final note: What has already been built.**
+>
+> This folder is only the extraction *method*, demonstrated on 10 résumés. The
+> full dataset it belongs to is already complete, in two layers:
+>
+> - **Appointment-level events** — 285,511 résumés extracted into 71,943
+>   political appointments, deduplicated across résumé versions down to
+>   **30,678** events, covering **20,381 executives at 4,249 listed firms**.
+> - **Political-connection panels** at three grains: firm-year-person
+>   (**1,363,767** rows), firm-year (**74,458**), and a firm-year panel anchored
+>   to each firm's registered address (**58,263**). The anchored panel classifies
+>   every appointment as local / same-province-other-city / cross-province /
+>   central, and separates directors from executives. 12.5% of person-years
+>   carry a political appointment and 78.2% of firm-years have at least one
+>   politically connected director; under the firm-anchored definition, **42.3%
+>   of firm-years have an out-of-province connection**.
+>
+> Full field dictionaries and construction rules are in the project's
+> `data_description.md` §9–§10 (available on request).
